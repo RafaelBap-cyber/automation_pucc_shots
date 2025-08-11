@@ -1,0 +1,60 @@
+2025-08-05 12:12:55,621 - INFO - Pasta verificada: Entrada
+2025-08-05 12:12:55,622 - INFO - Pasta verificada: Saida
+2025-08-05 12:12:55,623 - INFO - Pasta verificada: Entrada\Processados
+2025-08-05 12:12:55,625 - INFO - Pasta verificada: Entrada\Erros
+2025-08-05 12:12:55,626 - INFO - Verificando pasta de entrada...
+2025-08-05 12:12:55,627 - INFO - Encontrados 1 arquivos para processar.
+2025-08-05 12:12:55,628 - INFO - Processando: Relatório de Empréstimos 04.08.2025.xlsx
+2025-08-05 12:12:55,628 - INFO - Processando empréstimos: Relatório de Empréstimos 04.08.2025.xlsx
+2025-08-05 12:12:57,035 - INFO - Empréstimos processados: Saida\emprestimos_20250805_121256.xlsx
+2025-08-05 12:12:57,045 - INFO - Arquivo movido: Relatório de Empréstimos 04.08.2025.xlsx -> Entrada\Processados\Relatório de Empréstimos 04.08.2025.xlsx
+2025-08-05 12:12:57,046 - INFO - ✅ Relatório de Empréstimos 04.08.2025.xlsx processado com sucesso!
+2025-08-05 12:22:15,624 - INFO - Pasta verificada: Entrada
+2025-08-05 12:22:15,625 - INFO - Pasta verificada: Saida
+2025-08-05 12:22:15,626 - INFO - Pasta verificada: Entrada\Processados
+2025-08-05 12:22:15,627 - INFO - Pasta verificada: Entrada\Erros
+2025-08-05 12:22:15,627 - INFO - Verificando pasta de entrada...
+2025-08-05 12:22:15,629 - INFO - Encontrados 1 arquivos para processar.
+2025-08-05 12:22:15,629 - INFO - Processando: Relatório de PendÊncia 04.08.2025.xlsx
+2025-08-05 12:22:15,629 - INFO - Processando pendências: Relatório de PendÊncia 04.08.2025.xlsx
+2025-08-05 12:22:16,532 - INFO - Pendências processadas: Saida\pendencias_20250805_122216.xlsx
+2025-08-05 12:22:16,538 - INFO - Arquivo movido: Relatório de PendÊncia 04.08.2025.xlsx -> Entrada\Processados\Relatório de PendÊncia 04.08.2025.xlsx
+2025-08-05 12:22:16,538 - INFO - ✅ Relatório de PendÊncia 04.08.2025.xlsx processado com sucesso!
+2025-08-05 14:14:43,174 - INFO - Pasta verificada: Entrada
+2025-08-05 14:14:43,175 - INFO - Pasta verificada: Saida
+2025-08-05 14:14:43,175 - INFO - Pasta verificada: Entrada\Processados
+2025-08-05 14:14:43,176 - INFO - Pasta verificada: Entrada\Erros
+2025-08-05 14:14:43,177 - INFO - Verificando pasta de entrada...
+2025-08-05 14:14:43,178 - INFO - Encontrados 2 arquivos para processar.
+2025-08-05 14:14:43,178 - INFO - Processando: empréstimos.xlsx
+2025-08-05 14:14:43,178 - INFO - Processando empréstimos: empréstimos.xlsx
+2025-08-05 14:14:44,248 - INFO - Empréstimos processados: Saida\emprestimos_20250805_141443.xlsx
+2025-08-05 14:14:44,257 - INFO - Arquivo movido: empréstimos.xlsx -> Entrada\Processados\empréstimos.xlsx
+2025-08-05 14:14:44,258 - INFO - ✅ empréstimos.xlsx processado com sucesso!
+2025-08-05 14:14:44,258 - INFO - Processando: pendência.xlsx
+2025-08-05 14:14:44,258 - INFO - Processando pendências: pendência.xlsx
+2025-08-05 14:14:44,523 - INFO - Pendências processadas: Saida\pendencias_20250805_141444.xlsx
+2025-08-05 14:14:44,529 - INFO - Arquivo movido: pendência.xlsx -> Entrada\Processados\pendência.xlsx
+2025-08-05 14:14:44,529 - INFO - ✅ pendência.xlsx processado com sucesso!
+2025-08-05 14:48:16,409 - INFO - Pasta verificada: Entrada
+2025-08-05 14:48:16,410 - INFO - Pasta verificada: Saida
+2025-08-05 14:48:16,411 - INFO - Pasta verificada: Entrada\Processados
+2025-08-05 14:48:16,412 - INFO - Pasta verificada: Entrada\Erros
+2025-08-05 14:48:16,412 - INFO - Verificando pasta de entrada...
+2025-08-05 14:48:16,413 - INFO - Encontrados 1 arquivos para processar.
+2025-08-05 14:48:16,413 - INFO - Processando: empréstimo.xlsx
+2025-08-05 14:48:16,414 - INFO - Processando empréstimos: empréstimo.xlsx
+2025-08-05 14:48:17,541 - INFO - Empréstimos processados: Saida\emprestimos_20250805_144817.xlsx
+2025-08-05 14:48:17,551 - INFO - Arquivo movido: empréstimo.xlsx -> Entrada\Processados\empréstimo.xlsx
+2025-08-05 14:48:17,552 - INFO - ✅ empréstimo.xlsx processado com sucesso!
+2025-08-05 15:12:01,278 - INFO - Pasta verificada: Entrada
+2025-08-05 15:12:01,278 - INFO - Pasta verificada: Saida
+2025-08-05 15:12:01,279 - INFO - Pasta verificada: Entrada\Processados
+2025-08-05 15:12:01,280 - INFO - Pasta verificada: Entrada\Erros
+2025-08-05 15:12:01,280 - INFO - Verificando pasta de entrada...
+2025-08-05 15:12:01,282 - INFO - Encontrados 1 arquivos para processar.
+2025-08-05 15:12:01,282 - INFO - Processando: Empréstimos.xlsx
+2025-08-05 15:12:01,282 - INFO - Processando empréstimos: Empréstimos.xlsx
+2025-08-05 15:12:02,355 - INFO - Empréstimos processados: Saida\emprestimos_20250805_151202.xlsx
+2025-08-05 15:12:02,366 - INFO - Arquivo movido: Empréstimos.xlsx -> Entrada\Processados\Empréstimos.xlsx
+2025-08-05 15:12:02,366 - INFO - ✅ Empréstimos.xlsx processado com sucesso!

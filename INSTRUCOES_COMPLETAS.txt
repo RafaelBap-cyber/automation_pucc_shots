@@ -1,0 +1,60 @@
+# 🚀 SISTEMA DE PROCESSAMENTO DE BIBLIOTECA
+
+## 📋 Instalação Concluída!
+
+O sistema foi instalado com sucesso e está pronto para uso.
+
+## 🎯 Como usar:
+
+### Método 1 - Arquivo .bat (Recomendado):
+1. Clique duas vezes em **"Executar_Processador.bat"**
+2. O processador iniciará automaticamente
+3. Coloque os arquivos Excel na pasta **"Entrada"**
+4. Os resultados aparecerão na pasta **"Saida"**
+
+### Método 2 - Executável direto:
+1. Clique duas vezes em **"ProcessadorBiblioteca.exe"**
+2. Siga as instruções na tela
+
+## 📁 Estrutura criada:
+
+```
+📂 Pasta do Sistema/
+├── 📄 ProcessadorBiblioteca.exe     # Executável principal
+├── 📄 Executar_Processador.bat      # Arquivo para execução fácil
+├── 📂 Entrada/                      # Coloque arquivos aqui
+│   ├── 📄 README.txt               # Instruções detalhadas
+│   ├── 📂 Processados/             # Arquivos já processados
+│   └── 📂 Erros/                   # Arquivos com erro
+└── 📂 Saida/                       # Resultados processados
+```
+
+## 📊 Funcionalidades:
+
+- ✅ **Processamento automático** de empréstimos e pendências
+- ✅ **Identificação inteligente** do tipo de arquivo
+- ✅ **Organização automática** dos arquivos
+- ✅ **Logs detalhados** de todas as operações
+- ✅ **Tratamento de erros** robusto
+- ✅ **Interface simples** e intuitiva
+
+## 🐛 Solução de problemas:
+
+### Arquivo não processado:
+- Verifique se está na pasta "Entrada"
+- Confirme se é um arquivo Excel (.xlsx ou .xls)
+- Verifique se o nome contém palavras-chave
+
+### Arquivo movido para "Erros":
+- Verifique o arquivo de log para detalhes
+- Confirme se o arquivo não está corrompido
+- Verifique se tem as colunas necessárias
+
+## 📞 Suporte:
+
+- 📄 Logs: Arquivos .log gerados automaticamente
+- 📖 Documentação: README.txt na pasta Entrada
+- 🔧 Configuração: Arquivo config.py (se necessário)
+
+---
+🎉 Sistema desenvolvido para automação de relatórios de biblioteca

@@ -1,0 +1,82 @@
+2025-08-06 16:51:13,572 - ERROR - Arquivo não encontrado: Relatório de Empréstimos 30.06.2025.xlsx
+2025-08-06 16:54:33,434 - INFO - Iniciando processamento
+2025-08-06 16:54:33,435 - INFO - Carregando dados de: Entrada/Processados/empréstimos.xlsx
+2025-08-06 16:54:34,901 - INFO - Dados carregados: 242 registros
+2025-08-06 16:54:34,902 - INFO - Todas as colunas necessárias estão presentes
+2025-08-06 16:54:34,902 - INFO - Selecionando colunas relevantes
+2025-08-06 16:54:34,907 - INFO - Removidos 0 registros sem email
+2025-08-06 16:54:34,912 - INFO - Removidas 82 duplicatas
+2025-08-06 16:54:34,914 - INFO - Dados ordenados por nome
+2025-08-06 16:54:34,921 - INFO - Nomes formatados com sucesso (apenas primeiro nome)
+2025-08-06 16:54:34,925 - INFO - Emails formatados com sucesso
+2025-08-06 16:54:34,926 - INFO - Dados de empréstimos formatados com sucesso
+2025-08-06 16:54:34,928 - INFO - Unidade 1: 71 registros
+2025-08-06 16:54:34,932 - INFO - Unidade 2: 39 registros
+2025-08-06 16:54:34,934 - INFO - Campus II: 39 registros
+2025-08-06 16:54:34,936 - INFO - === RELATÓRIO DE PROCESSAMENTO ===
+2025-08-06 16:54:34,937 - INFO - Total de registros processados: 149
+2025-08-06 16:54:34,938 - INFO - Colunas no dataset: ['Nome da pessoa', 'Gênero', 'Nome da biblioteca', 'Email']
+2025-08-06 16:54:34,940 - INFO - Biblioteca Campus I - Unid. 1: 71 registros
+2025-08-06 16:54:34,944 - INFO - Biblioteca Campus I - Unid. 2: 39 registros
+2025-08-06 16:54:34,946 - INFO - Biblioteca Campus II: 39 registros
+2025-08-06 16:54:34,948 - INFO - Salvando planilhas em: Relatório de Empréstimos.xlsx
+2025-08-06 16:54:34,985 - INFO - Planilha 'Unidade 1' salva com 71 registros
+2025-08-06 16:54:34,993 - INFO - Planilha 'Unidade 2' salva com 39 registros
+2025-08-06 16:54:35,004 - INFO - Planilha 'Campus II' salva com 39 registros
+2025-08-06 16:54:35,027 - INFO - Planilha 'Base' salva com 149 registros
+2025-08-06 16:54:35,380 - INFO - Processamento concluído com sucesso!
+2025-08-07 16:47:53,786 - INFO - Iniciando processamento
+2025-08-07 16:47:53,788 - ERROR - Arquivo não encontrado: Entrada/Processados/empréstimos.xlsx
+2025-08-07 16:48:58,028 - INFO - Iniciando processamento
+2025-08-07 16:48:58,028 - INFO - Carregando dados de: Entrada/Processados/Empréstimos_Teste.xlsx
+2025-08-07 16:49:00,236 - INFO - Dados carregados: 271 registros
+2025-08-07 16:49:00,237 - INFO - Todas as colunas necessárias estão presentes
+2025-08-07 16:49:00,237 - INFO - Selecionando colunas relevantes
+2025-08-07 16:49:00,241 - INFO - Removidos 0 registros sem email
+2025-08-07 16:49:00,244 - INFO - Removidas 85 duplicatas
+2025-08-07 16:49:00,245 - INFO - Dados ordenados por nome
+2025-08-07 16:49:00,249 - INFO - Nomes formatados com sucesso (apenas primeiro nome)
+2025-08-07 16:49:00,251 - INFO - Emails formatados com sucesso
+2025-08-07 16:49:00,251 - INFO - Dados de empréstimos formatados com sucesso
+2025-08-07 16:49:00,253 - INFO - Unidade 1: 89 registros
+2025-08-07 16:49:00,254 - INFO - Unidade 2: 36 registros
+2025-08-07 16:49:00,255 - INFO - Campus II: 57 registros
+2025-08-07 16:49:00,256 - INFO - === RELATÓRIO DE PROCESSAMENTO ===
+2025-08-07 16:49:00,256 - INFO - Total de registros processados: 182
+2025-08-07 16:49:00,257 - INFO - Colunas no dataset: ['Nome da pessoa', 'Gênero', 'Nome da biblioteca', 'Email']
+2025-08-07 16:49:00,258 - INFO - Biblioteca Campus I - Unid. 1: 89 registros
+2025-08-07 16:49:00,260 - INFO - Biblioteca Campus I - Unid. 2: 36 registros
+2025-08-07 16:49:00,262 - INFO - Biblioteca Campus II: 57 registros
+2025-08-07 16:49:00,262 - INFO - Salvando planilhas em: Relatório de Empréstimos.xlsx
+2025-08-07 16:49:00,304 - INFO - Planilha 'Unidade 1' salva com 89 registros
+2025-08-07 16:49:00,311 - INFO - Planilha 'Unidade 2' salva com 36 registros
+2025-08-07 16:49:00,317 - INFO - Planilha 'Campus II' salva com 57 registros
+2025-08-07 16:49:00,329 - INFO - Planilha 'Base' salva com 182 registros
+2025-08-07 16:49:00,532 - INFO - Processamento concluído com sucesso!
+2025-08-07 17:05:34,388 - INFO - Iniciando processamento
+2025-08-07 17:05:34,389 - INFO - Carregando dados de: Entrada/Processados/Pendência_Teste.xlsx
+2025-08-07 17:05:35,734 - INFO - Dados carregados: 79 registros
+2025-08-07 17:05:35,735 - INFO - Selecionando colunas relevantes
+2025-08-07 17:05:35,743 - INFO - Selecionadas 6 colunas
+2025-08-07 17:05:35,746 - INFO - Encontrados 2 registros sem email
+2025-08-07 17:05:35,750 - INFO - Removidos 2 registros sem email
+2025-08-07 17:05:35,752 - INFO - Dados ordenados por nome
+2025-08-07 17:05:35,758 - INFO - Nomes formatados com sucesso (apenas primeiro nome)
+2025-08-07 17:05:35,760 - INFO - Emails formatados com sucesso
+2025-08-07 17:05:35,760 - INFO - Dados de pendências formatados com sucesso
+2025-08-07 17:05:35,764 - INFO - Colunas reordenadas com sucesso
+2025-08-07 17:05:35,768 - INFO - Unidade 1: 32 registros
+2025-08-07 17:05:35,770 - INFO - Unidade 2: 29 registros
+2025-08-07 17:05:35,774 - INFO - Campus II: 16 registros
+2025-08-07 17:05:35,775 - INFO - === RELATÓRIO DE PROCESSAMENTO ===
+2025-08-07 17:05:35,776 - INFO - Total de registros processados: 77
+2025-08-07 17:05:35,776 - INFO - Colunas no dataset: ['Nome da pessoa', 'Email', 'Título', 'Data de empréstimo', 'Data devolução prevista', 'Nome da biblioteca']
+2025-08-07 17:05:35,779 - INFO - Biblioteca Campus I - Unid. 1: 32 registros
+2025-08-07 17:05:35,786 - INFO - Biblioteca Campus I - Unid. 2: 29 registros
+2025-08-07 17:05:35,801 - INFO - Biblioteca Campus II: 16 registros
+2025-08-07 17:05:35,802 - INFO - Salvando planilhas em: Relatório de Pendência.xlsx
+2025-08-07 17:05:35,837 - INFO - Planilha 'Unidade 1' salva com 32 registros
+2025-08-07 17:05:35,846 - INFO - Planilha 'Unidade 2' salva com 29 registros
+2025-08-07 17:05:35,854 - INFO - Planilha 'Campus II' salva com 16 registros
+2025-08-07 17:05:35,866 - INFO - Planilha 'Base' salva com 77 registros
+2025-08-07 17:05:36,121 - INFO - Processamento concluído com sucesso!

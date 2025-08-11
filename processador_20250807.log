@@ -1,0 +1,16 @@
+2025-08-07 15:34:58,335 - INFO - Pasta verificada: Entrada
+2025-08-07 15:34:58,336 - INFO - Pasta verificada: Saida
+2025-08-07 15:34:58,337 - INFO - Pasta verificada: Entrada\Processados
+2025-08-07 15:34:58,337 - INFO - Pasta verificada: Entrada\Erros
+2025-08-07 15:34:58,338 - INFO - Verificando pasta de entrada...
+2025-08-07 15:34:58,339 - INFO - Encontrados 2 arquivos para processar.
+2025-08-07 15:34:58,339 - INFO - Processando: Empréstimos_Teste.xlsx
+2025-08-07 15:34:58,339 - INFO - Processando empréstimos: Empréstimos_Teste.xlsx
+2025-08-07 15:34:59,738 - INFO - Empréstimos processados: Saida\emprestimos_20250807_153459.xlsx
+2025-08-07 15:34:59,749 - INFO - Arquivo movido: Empréstimos_Teste.xlsx -> Entrada\Processados\Empréstimos_Teste.xlsx
+2025-08-07 15:34:59,749 - INFO - ✅ Empréstimos_Teste.xlsx processado com sucesso!
+2025-08-07 15:34:59,750 - INFO - Processando: Pendência_Teste.xlsx
+2025-08-07 15:34:59,750 - INFO - Processando pendências: Pendência_Teste.xlsx
+2025-08-07 15:35:00,150 - INFO - Pendências processadas: Saida\pendencias_20250807_153500.xlsx
+2025-08-07 15:35:00,156 - INFO - Arquivo movido: Pendência_Teste.xlsx -> Entrada\Processados\Pendência_Teste.xlsx
+2025-08-07 15:35:00,156 - INFO - ✅ Pendência_Teste.xlsx processado com sucesso!

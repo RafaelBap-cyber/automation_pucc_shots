@@ -1,0 +1,16 @@
+2025-08-06 16:52:43,200 - INFO - Pasta criada/verificada: Entrada
+2025-08-06 16:52:43,201 - INFO - Pasta criada/verificada: Saida
+2025-08-06 16:52:43,203 - INFO - Pasta criada/verificada: Entrada\Processados
+2025-08-06 16:52:43,208 - INFO - Pasta criada/verificada: Entrada\Erros
+2025-08-06 16:52:43,216 - INFO - Iniciando monitoramento da pasta: Entrada
+2025-08-06 16:52:43,218 - INFO - Arquivos processados serão salvos em: Saida
+2025-08-06 16:52:43,219 - INFO - Pressione Ctrl+C para parar o monitoramento
+2025-08-06 16:52:43,219 - INFO - Verificando pasta de entrada...
+2025-08-06 16:52:43,227 - INFO - Nenhum arquivo novo encontrado.
+2025-08-06 16:53:13,231 - INFO - Verificando pasta de entrada...
+2025-08-06 16:53:13,233 - INFO - Nenhum arquivo novo encontrado.
+2025-08-06 16:53:43,236 - INFO - Verificando pasta de entrada...
+2025-08-06 16:53:43,238 - INFO - Nenhum arquivo novo encontrado.
+2025-08-06 16:54:13,240 - INFO - Verificando pasta de entrada...
+2025-08-06 16:54:13,242 - INFO - Nenhum arquivo novo encontrado.
+2025-08-06 16:54:13,469 - INFO - Monitoramento interrompido pelo usuário.

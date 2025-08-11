@@ -1,0 +1,67 @@
+# INSTRUÇÕES DE USO - PROCESSADOR DE BIBLIOTECA
+
+## 🚀 Como usar:
+
+### Método 1 - Arquivo .bat (Recomendado):
+1. Clique duas vezes em "Executar_Processador.bat"
+2. O processador iniciará automaticamente
+3. Coloque os arquivos Excel na pasta "Entrada"
+4. Os resultados aparecerão na pasta "Saida"
+
+### Método 2 - Executável direto:
+1. Clique duas vezes em "ProcessadorBiblioteca.exe"
+2. Siga as instruções na tela
+
+## 📁 Estrutura de pastas:
+
+```
+📂 Pasta do Projeto/
+├── 📄 ProcessadorBiblioteca.exe     # Executável principal
+├── 📄 Executar_Processador.bat      # Arquivo para execução fácil
+├── 📂 Entrada/                      # Coloque arquivos aqui
+│   ├── 📄 README.txt               # Instruções
+│   ├── 📂 Processados/             # Arquivos já processados
+│   └── 📂 Erros/                   # Arquivos com erro
+└── 📂 Saida/                       # Resultados processados
+```
+
+## 📊 Tipos de arquivo aceitos:
+
+### Empréstimos:
+- Arquivos com "emprestimo", "empréstimo", "loan" no nome
+- Formatos: .xlsx, .xls
+
+### Pendências:
+- Arquivos com "pendencia", "pendência", "pending" no nome
+- Formatos: .xlsx, .xls
+
+## ⚙️ Configuração:
+
+O sistema funciona automaticamente, mas você pode:
+- Modificar o intervalo de verificação
+- Alterar nomes de pastas
+- Personalizar configurações no arquivo config.py
+
+## 🐛 Solução de problemas:
+
+### Erro: "Arquivo não encontrado"
+- Verifique se o arquivo Excel está na pasta "Entrada"
+- Confirme se o arquivo não está corrompido
+
+### Erro: "Tipo não identificado"
+- Verifique se o nome do arquivo contém palavras-chave
+- Consulte a seção "Tipos de arquivo aceitos"
+
+### Arquivo movido para "Erros"
+- Verifique o log para detalhes do erro
+- Confirme se o arquivo tem o formato correto
+
+## 📞 Suporte:
+
+Para problemas ou dúvidas, consulte:
+- Arquivo de log gerado automaticamente
+- README.txt na pasta Entrada
+- Documentação completa no README.md
+
+---
+Desenvolvido para automação de relatórios de biblioteca
