@@ -11,7 +11,7 @@ echo.
 echo Pressione qualquer tecla para parar...
 echo.
 
-ProcessadorBiblioteca.exe
+dist\ProcessadorBiblioteca.exe
 
 echo.
 echo Processamento concluido!
