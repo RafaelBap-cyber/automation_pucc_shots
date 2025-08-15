@@ -1,0 +1,868 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documentação Completa - Sistema de Processamento de Biblioteca</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+            color: white;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+
+        .nav {
+            background: #34495e;
+            padding: 1rem 2rem;
+            border-bottom: 3px solid #3498db;
+        }
+
+        .nav ul {
+            list-style: none;
+            display: flex;
+            gap: 2rem;
+            justify-content: center;
+        }
+
+        .nav a {
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+
+        .nav a:hover {
+            background: #3498db;
+        }
+
+        .content {
+            padding: 2rem;
+        }
+
+        .section {
+            margin-bottom: 3rem;
+            padding: 2rem;
+            background: #f8f9fa;
+            border-radius: 10px;
+            border-left: 5px solid #3498db;
+        }
+
+        .section h2 {
+            color: #2c3e50;
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 0.5rem;
+        }
+
+        .section h3 {
+            color: #34495e;
+            font-size: 1.5rem;
+            margin: 1.5rem 0 1rem 0;
+        }
+
+        .highlight {
+            background: #e8f4fd;
+            border: 1px solid #3498db;
+            border-radius: 5px;
+            padding: 1rem;
+            margin: 1rem 0;
+        }
+
+        .code-block {
+            background: #2c3e50;
+            color: #ecf0f1;
+            padding: 1.5rem;
+            border-radius: 5px;
+            overflow-x: auto;
+            font-family: 'Courier New', monospace;
+            margin: 1rem 0;
+        }
+
+        .file-structure {
+            background: #f1f2f6;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 1rem;
+            font-family: 'Courier New', monospace;
+            margin: 1rem 0;
+        }
+
+        .step {
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 1.5rem;
+            margin: 1rem 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .step h4 {
+            color: #3498db;
+            margin-bottom: 0.5rem;
+        }
+
+        .advantage {
+            background: #d4edda;
+            border: 1px solid #c3e6cb;
+            border-radius: 5px;
+            padding: 1rem;
+            margin: 0.5rem 0;
+        }
+
+        .warning {
+            background: #fff3cd;
+            border: 1px solid #ffeaa7;
+            border-radius: 5px;
+            padding: 1rem;
+            margin: 1rem 0;
+        }
+
+        .success {
+            background: #d1ecf1;
+            border: 1px solid #bee5eb;
+            border-radius: 5px;
+            padding: 1rem;
+            margin: 1rem 0;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1rem;
+            margin: 1rem 0;
+        }
+
+        .card {
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 1.5rem;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .card h4 {
+            color: #3498db;
+            margin-bottom: 1rem;
+        }
+
+        .emoji {
+            font-size: 1.5rem;
+            margin-right: 0.5rem;
+        }
+
+        .toc {
+            background: #f8f9fa;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .toc h3 {
+            color: #2c3e50;
+            margin-bottom: 1rem;
+        }
+
+        .toc ul {
+            list-style: none;
+        }
+
+        .toc li {
+            margin: 0.5rem 0;
+        }
+
+        .toc a {
+            color: #3498db;
+            text-decoration: none;
+            padding: 0.25rem 0;
+            display: block;
+        }
+
+        .toc a:hover {
+            text-decoration: underline;
+        }
+
+        .footer {
+            background: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 2rem;
+        }
+
+        @media (max-width: 768px) {
+            .nav ul {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            .header h1 {
+                font-size: 2rem;
+            }
+            
+            .content {
+                padding: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>�� Sistema de Processamento de Relatórios de Biblioteca</h1>
+            <p>Documentação Completa - Estrutura do Código e Criação de Executável</p>
+        </header>
+
+        <nav class="nav">
+            <ul>
+                <li><a href="#estrutura">Estrutura do Código</a></li>
+                <li><a href="#executavel">Criação do Executável</a></li>
+                <li><a href="#arquitetura">Arquitetura</a></li>
+                <li><a href="#uso">Como Usar</a></li>
+                <li><a href="#tecnologias">Tecnologias</a></li>
+            </ul>
+        </nav>
+
+        <div class="content">
+            <div class="toc">
+                <h3>�� Índice da Documentação</h3>
+                <ul>
+                    <li><a href="#introducao">1. Introdução ao Sistema</a></li>
+                    <li><a href="#estrutura">2. Estrutura do Código</a></li>
+                    <li><a href="#arquitetura">3. Arquitetura do Sistema</a></li>
+                    <li><a href="#executavel">4. Criação do Executável (PyInstaller)</a></li>
+                    <li><a href="#processo">5. Processo de Build</a></li>
+            <li><a href="#configuracao">6. Configuração e Personalização</a></li>
+                    <li><a href="#uso">7. Como Usar o Sistema</a></li>
+                    <li><a href="#troubleshooting">8. Solução de Problemas</a></li>
+                </ul>
+            </div>
+
+            <section id="introducao" class="section">
+                <h2>🚀 Introdução ao Sistema</h2>
+                <p>Este sistema foi desenvolvido para automatizar o processamento de relatórios de biblioteca, especificamente para:</p>
+                
+                <div class="grid">
+                    <div class="card">
+                        <h4>�� Relatórios de Empréstimos</h4>
+                        <p>Processa dados de empréstimos de livros, organizando por bibliotecas e formatando informações dos usuários.</p>
+                    </div>
+                    <div class="card">
+                        <h4>⏰ Relatórios de Pendências</h4>
+                        <p>Gerencia pendências de devolução, organizando por data e biblioteca.</p>
+                    </div>
+                </div>
+
+                <div class="highlight">
+                    <strong>�� Objetivo Principal:</strong> Transformar scripts Python em um executável standalone que pode ser usado por usuários finais sem necessidade de instalar Python ou dependências.
+                </div>
+            </section>
+
+            <section id="estrutura" class="section">
+                <h2>📁 Estrutura do Código</h2>
+                
+                <h3>Arquivos Principais</h3>
+                <div class="file-structure">
+�� Automation-Shots/
+├── 📄 código de empréstimo.py          # Script original de empréstimos
+├── 📄 código de pendência.py           # Script original de pendências
+├── 📄 processador_base.py              # Classe base abstrata
+├── 📄 processador_unificado.py         # Processador unificado
+├── 📄 processador_automatico.py        # Processador automático
+├── 📄 processador_simples.py           # Versão para executável
+├── 📄 criar_executavel.py              # Script de criação do executável
+├── 📄 config.py                        # Configurações centralizadas
+├── 📄 requirements.txt                 # Dependências do projeto
+├── 📄 ProcessadorBiblioteca.exe        # Executável final
+├── 📄 Executar_Processador.bat         # Arquivo batch para execução
+├── 📂 Entrada/                         # Pasta de entrada de arquivos
+│   ├── �� README.txt
+│   ├── �� Processados/
+│   └── 📂 Erros/
+└── 📂 Saida/                           # Pasta de saída dos resultados
+                </div>
+
+                <h3>Evolução do Código</h3>
+                <div class="step">
+                    <h4>1️⃣ Códigos Originais</h4>
+                    <p><strong>código de empréstimo.py</strong> e <strong>código de pendência.py</strong></p>
+                    <ul>
+                        <li>Scripts simples e funcionais</li>
+                        <li>Processamento básico de Excel</li>
+                        <li>Sem tratamento robusto de erros</li>
+                        <li>Sem organização de arquivos</li>
+                    </ul>
+                </div>
+
+                <div class="step">
+                    <h4>2️⃣ Versões Melhoradas</h4>
+                    <p><strong>processador_unificado.py</strong> e <strong>processador_automatico.py</strong></p>
+                    <ul>
+                        <li>Arquitetura modular e reutilizável</li>
+                        <li>Tratamento robusto de erros</li>
+                        <li>Logging detalhado</li>
+                        <li>Configuração centralizada</li>
+                    </ul>
+                </div>
+
+                <div class="step">
+                    <h4>3️⃣ Versão Executável</h4>
+                    <p><strong>processador_simples.py</strong></p>
+                    <ul>
+                        <li>Otimizado para conversão em executável</li>
+                        <li>Organização automática de arquivos</li>
+                        <li>Interface simples e intuitiva</li>
+                        <li>Funciona sem Python instalado</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section id="arquitetura" class="section">
+                <h2>🏗️ Arquitetura do Sistema</h2>
+
+                <h3>Padrão de Design</h3>
+                <p>O sistema utiliza o padrão <strong>Template Method</strong> com uma classe base abstrata:</p>
+
+                <div class="code-block">
+class ProcessadorBase(ABC):
+    """Classe base abstrata para processamento de relatórios."""
+    
+    def __init__(self, arquivo_entrada: str, arquivo_saida: str):
+        self.arquivo_entrada = arquivo_entrada
+        self.arquivo_saida = arquivo_saida
+        self.df = None
+        self._configurar_logging()
+    
+    @abstractmethod
+    def processar_dados_especificos(self) -> None:
+        """Método abstrato para processamento específico."""
+        pass
+    
+    def carregar_dados(self) -> bool:
+        """Carrega dados do arquivo Excel."""
+        # Implementação comum
+    
+    def validar_colunas(self, colunas_necessarias: List[str]) -> bool:
+        """Valida se as colunas necessárias existem."""
+        # Implementação comum
+                </div>
+
+                <h3>Herança e Especialização</h3>
+                <div class="code-block">
+class ProcessadorEmprestimos(ProcessadorBase):
+    """Processador específico para relatórios de empréstimos."""
+    
+    def processar_dados_especificos(self) -> None:
+        """Implementação específica para empréstimos."""
+        # Lógica específica de empréstimos
+
+class ProcessadorPendencias(ProcessadorBase):
+    """Processador específico para relatórios de pendências."""
+    
+    def processar_dados_especificos(self) -> None:
+        """Implementação específica para pendências."""
+        # Lógica específica de pendências
+                </div>
+
+                <h3>Configuração Centralizada</h3>
+                <div class="code-block">
+# config.py
+ARQUIVOS_CONFIG = {
+    "emprestimos": {
+        "entrada": "Entrada/Processados/Empréstimos_Teste.xlsx",
+        "saida": "Relatório de Empréstimos.xlsx"
+    },
+    "pendencias": {
+        "entrada": "Entrada/Processados/Pendência_Teste.xlsx", 
+        "saida": "Relatório de Pendência.xlsx"
+    }
+}
+
+COLUNAS_EMPRESTIMOS = [
+    'Nome da pessoa', 'Gênero', 'Nome da biblioteca', 
+    'Email', 'Nome pessoa empréstimo'
+]
+
+MAPEAMENTO_GENERO = {"M": "o", "F": "a"}
+                </div>
+            </section>
+
+            <section id="executavel" class="section">
+                <h2>🔨 Criação do Executável com PyInstaller</h2>
+                
+                <div class="highlight">
+                    <strong>🎯 Foco Principal:</strong> Esta seção explica detalhadamente como transformar scripts Python em executáveis standalone usando PyInstaller.
+                </div>
+
+                <h3>O que é o PyInstaller?</h3>
+                <p>PyInstaller é uma ferramenta que "empacota" aplicações Python em executáveis standalone. Ele analisa seu script Python, encontra todas as dependências e cria um único arquivo executável que pode ser executado em qualquer computador com o mesmo sistema operacional.</p>
+
+                <h3>Processo de Criação do Executável</h3>
+
+                <div class="step">
+                    <h4>1️⃣ Instalação do PyInstaller</h4>
+                    <div class="code-block">
+def instalar_pyinstaller():
+    """Instala o PyInstaller se não estiver instalado."""
+    try:
+        import PyInstaller
+        print("✅ PyInstaller já está instalado")
+        return True
+    except ImportError:
+        print("📦 Instalando PyInstaller...")
+        try:
+            subprocess.check_call([sys.executable, "-m", "pip", "install", "pyinstaller"])
+            print("✅ PyInstaller instalado com sucesso")
+            return True
+        except subprocess.CalledProcessError:
+            print("❌ Erro ao instalar PyInstaller")
+            return False
+                    </div>
+                </div>
+
+                <div class="step">
+                    <h4>2️⃣ Configuração do Comando PyInstaller</h4>
+                    <div class="code-block">
+def criar_executavel():
+    """Cria o executável do processador automático."""
+    print("�� Criando executável...")
+    
+    # Configuração do PyInstaller
+    comando = [
+        "pyinstaller",
+        "--onefile",                    # Criar um único arquivo executável
+        "--console",                    # Mostrar console para logs
+        "--name=ProcessadorBiblioteca", # Nome do executável
+        "--hidden-import=pandas",       # Incluir pandas
+        "--hidden-import=openpyxl",     # Incluir openpyxl
+        "--hidden-import=xlrd",         # Incluir xlrd
+        "processador_simples.py"        # Script principal
+    ]
+    
+    try:
+        subprocess.check_call(comando)
+        print("✅ Executável criado com sucesso!")
+        return True
+    except subprocess.CalledProcessError as e:
+        print(f"❌ Erro ao criar executável: {e}")
+        return False
+                    </div>
+                </div>
+
+                <h3>Parâmetros do PyInstaller Explicados</h3>
+                <div class="grid">
+                    <div class="card">
+                        <h4>--onefile</h4>
+                        <p>Cria um único arquivo executável em vez de uma pasta com múltiplos arquivos. Facilita a distribuição.</p>
+                    </div>
+                    <div class="card">
+                        <h4>--console</h4>
+                        <p>Mostra a janela do console durante a execução. Útil para ver logs e mensagens de erro.</p>
+                    </div>
+                    <div class="card">
+                        <h4>--name</h4>
+                        <p>Define o nome do arquivo executável gerado.</p>
+                    </div>
+                    <div class="card">
+                        <h4>--hidden-import</h4>
+                        <p>Força a inclusão de módulos que o PyInstaller não detecta automaticamente.</p>
+                    </div>
+                </div>
+
+                <h3>Estrutura de Pastas Criada</h3>
+                <div class="code-block">
+def criar_estrutura_pastas():
+    """Cria a estrutura de pastas necessária."""
+    print("📁 Criando estrutura de pastas...")
+    
+    pastas = ["Entrada", "Saida", "Entrada/Processados", "Entrada/Erros"]
+    
+    for pasta in pastas:
+        Path(pasta).mkdir(exist_ok=True)
+        print(f"  ✅ {pasta}")
+    
+    # Criar arquivo README na pasta de entrada
+    readme_entrada = """# Pasta de Entrada
+
+Coloque aqui os arquivos Excel de empréstimos e pendências para processamento.
+
+## Tipos de arquivo aceitos:
+- Relatórios de empréstimos (.xlsx, .xls)
+- Relatórios de pendências (.xlsx, .xls)
+
+## Como funciona:
+1. Coloque os arquivos nesta pasta
+2. Execute o ProcessadorBiblioteca.exe
+3. Os arquivos processados aparecerão na pasta "Saida"
+4. Os arquivos originais serão movidos para "Entrada/Processados"
+"""
+    
+    with open("Entrada/README.txt", "w", encoding="utf-8") as f:
+        f.write(readme_entrada)
+                </div>
+
+                <h3>Arquivo Batch para Execução Fácil</h3>
+                <div class="code-block">
+def criar_arquivo_batch():
+    """Cria um arquivo .bat para facilitar a execução."""
+    print("📝 Criando arquivo .bat...")
+    
+    conteudo_batch = """@echo off
+echo ========================================
+echo  Processador de Relatorios de Biblioteca
+echo ========================================
+echo.
+echo Iniciando processamento automatico...
+echo.
+echo Pasta de entrada: Entrada
+echo Pasta de saida: Saida
+echo.
+echo Pressione qualquer tecla para parar...
+echo.
+
+ProcessadorBiblioteca.exe
+
+echo.
+echo Processamento concluido!
+pause
+"""
+    
+    with open("Executar_Processador.bat", "w", encoding="utf-8") as f:
+        f.write(conteudo_batch)
+                </div>
+            </section>
+
+            <section id="processo" class="section">
+                <h2>⚙️ Processo de Build Completo</h2>
+
+                <h3>Fluxo de Criação do Executável</h3>
+                <div class="step">
+                    <h4>1️⃣ Preparação</h4>
+                    <ul>
+                        <li>Verifica se todos os arquivos necessários existem</li>
+                        <li>Instala o PyInstaller automaticamente</li>
+                        <li>Prepara o ambiente de build</li>
+                    </ul>
+                </div>
+
+                <div class="step">
+                    <h4>2️⃣ Análise de Dependências</h4>
+                    <ul>
+                        <li>PyInstaller analisa o script Python</li>
+                        <li>Identifica todas as importações</li>
+                        <li>Detecta bibliotecas necessárias (pandas, openpyxl, xlrd)</li>
+                        <li>Resolve dependências transitivas</li>
+                    </ul>
+                </div>
+
+                <div class="step">
+                    <h4>3️⃣ Criação do Executável</h4>
+                    <ul>
+                        <li>Compila o código Python em bytecode</li>
+                        <li>Empacota todas as dependências</li>
+                        <li>Cria o arquivo executável standalone</li>
+                        <li>Gera arquivos temporários (.spec, pasta build/)</li>
+                    </ul>
+                </div>
+
+                <div class="step">
+                    <h4>4️⃣ Estrutura de Suporte</h4>
+                    <ul>
+                        <li>Cria pastas necessárias (Entrada/, Saida/)</li>
+                        <li>Gera arquivo README.txt com instruções</li>
+                        <li>Cria arquivo .bat para execução fácil</li>
+                        <li>Gera instruções de uso completas</li>
+                    </ul>
+                </div>
+
+                <div class="step">
+                    <h4>5️⃣ Limpeza</h4>
+                    <ul>
+                        <li>Remove arquivos temporários do PyInstaller</li>
+                        <li>Limpa pasta build/ e arquivo .spec</li>
+                        <li>Mantém apenas o executável final</li>
+                    </ul>
+                </div>
+
+                <h3>Comando Completo de Build</h3>
+                <div class="code-block">
+# Comando PyInstaller completo
+pyinstaller --onefile --console --name=ProcessadorBiblioteca --hidden-import=pandas --hidden-import=openpyxl --hidden-import=xlrd processador_simples.py
+
+# O que cada parte faz:
+# pyinstaller          - Ferramenta principal
+# --onefile           - Um único arquivo executável
+# --console           - Mostrar console
+# --name=...          - Nome do executável
+# --hidden-import=... - Incluir bibliotecas específicas
+# processador_simples.py - Script principal
+                </div>
+
+                <h3>Arquivos Gerados Durante o Build</h3>
+                <div class="file-structure">
+�� Durante o Build:
+├── 📄 ProcessadorBiblioteca.spec    # Arquivo de especificação
+├── 📂 build/                        # Arquivos temporários de build
+│   └── 📂 ProcessadorBiblioteca/
+│       ├── 📄 ProcessadorBiblioteca.exe
+│       └── 📂 _internal/            # Dependências empacotadas
+└── 📂 dist/                         # Distribuição final
+    └── 📄 ProcessadorBiblioteca.exe # Executável final
+
+📂 Após Limpeza:
+└── 📄 ProcessadorBiblioteca.exe     # Apenas o executável final
+                </div>
+            </section>
+
+            <section id="configuracao" class="section">
+                <h2>🔧 Configuração e Personalização</h2>
+
+                <h3>Arquivo de Configuração (config.py)</h3>
+                <div class="code-block">
+# Configurações de arquivos
+ARQUIVOS_CONFIG = {
+    "emprestimos": {
+        "entrada": "Entrada/Processados/Empréstimos_Teste.xlsx",
+        "saida": "Relatório de Empréstimos.xlsx"
+    },
+    "pendencias": {
+        "entrada": "Entrada/Processados/Pendência_Teste.xlsx", 
+        "saida": "Relatório de Pendência.xlsx"
+    }
+}
+
+# Configurações de colunas
+COLUNAS_EMPRESTIMOS = [
+    'Nome da pessoa', 'Gênero', 'Nome da biblioteca', 
+    'Email', 'Nome pessoa empréstimo'
+]
+
+# Mapeamento de gêneros
+MAPEAMENTO_GENERO = {"M": "o", "F": "a"}
+
+# Configurações de bibliotecas
+BIBLIOTECAS = {
+    "Unidade 1": "Biblioteca Campus I - Unid. 1",
+    "Unidade 2": "Biblioteca Campus I - Unid. 2",
+    "Campus II": "Biblioteca Campus II"
+}
+                </div>
+
+                <h3>Personalização do Executável</h3>
+                <div class="grid">
+                    <div class="card">
+                        <h4>�� Alterar Nome</h4>
+                        <p>Modifique o parâmetro <code>--name</code> no comando PyInstaller:</p>
+                        <div class="code-block">
+--name=MeuProcessador
+                        </div>
+                    </div>
+                    <div class="card">
+                        <h4>🎨 Sem Console</h4>
+                        <p>Use <code>--windowed</code> em vez de <code>--console</code> para aplicação sem janela:</p>
+                        <div class="code-block">
+--windowed
+                        </div>
+                    </div>
+                    <div class="card">
+                        <h4>�� Múltiplos Arquivos</h4>
+                        <p>Remova <code>--onefile</code> para criar uma pasta com múltiplos arquivos:</p>
+                        <div class="code-block">
+# Sem --onefile
+pyinstaller --console --name=ProcessadorBiblioteca processador_simples.py
+                        </div>
+                    </div>
+                    <div class="card">
+                        <h4>🔒 Com Ícone</h4>
+                        <p>Adicione um ícone personalizado:</p>
+                        <div class="code-block">
+--icon=meu_icone.ico
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="uso" class="section">
+                <h2>🚀 Como Usar o Sistema</h2>
+
+                <h3>Para Desenvolvedores</h3>
+                <div class="step">
+                    <h4>Criar o Executável</h4>
+                    <div class="code-block">
+# 1. Instalar dependências
+pip install -r requirements.txt
+
+# 2. Executar o criador de executável
+python criar_executavel.py
+
+# 3. Ou executar diretamente
+python instalar_sistema.py
+                    </div>
+                </div>
+
+                <h3>Para Usuários Finais</h3>
+                <div class="step">
+                    <h4>Uso Simples</h4>
+                    <ol>
+                        <li>Clique duas vezes em <strong>Executar_Processador.bat</strong></li>
+                        <li>Coloque arquivos Excel na pasta <strong>Entrada</strong></li>
+                        <li>Os resultados aparecerão na pasta <strong>Saida</strong></li>
+                        <li>Arquivos processados vão para <strong>Entrada/Processados</strong></li>
+                        <li>Arquivos com erro vão para <strong>Entrada/Erros</strong></li>
+                    </ol>
+                </div>
+
+                <h3>Identificação Automática de Arquivos</h3>
+                <div class="code-block">
+def _identificar_tipo(self, arquivo: Path) -> str:
+    """Identifica o tipo do arquivo."""
+    nome = arquivo.name.lower()
+    
+    if any(palavra in nome for palavra in ["emprestimo", "empréstimo", "loan"]):
+        return "emprestimos"
+    elif any(palavra in nome for palavra in ["pendencia", "pendência", "pending"]):
+        return "pendencias"
+    else:
+        return "desconhecido"
+                </div>
+
+                <div class="highlight">
+                    <strong>📊 Tipos de Arquivo Aceitos:</strong>
+                    <ul>
+                        <li><strong>Empréstimos:</strong> arquivos com "emprestimo", "empréstimo", "loan" no nome</li>
+                        <li><strong>Pendências:</strong> arquivos com "pendencia", "pendência", "pending" no nome</li>
+                        <li><strong>Formatos:</strong> .xlsx, .xls</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section id="troubleshooting" class="section">
+                <h2>🔧 Solução de Problemas</h2>
+
+                <h3>Problemas Comuns na Criação do Executável</h3>
+                
+                <div class="warning">
+                    <h4>❌ Erro: "PyInstaller não encontrado"</h4>
+                    <p><strong>Solução:</strong> Execute <code>pip install pyinstaller</code></p>
+                </div>
+
+                <div class="warning">
+                    <h4>❌ Erro: "Módulo não encontrado"</h4>
+                    <p><strong>Solução:</strong> Adicione <code>--hidden-import=nome_do_modulo</code> ao comando PyInstaller</p>
+                </div>
+
+                <div class="warning">
+                    <h4>❌ Executável muito grande</h4>
+                    <p><strong>Solução:</strong> Use <code>--exclude-module</code> para excluir módulos desnecessários</p>
+                </div>
+
+                <div class="warning">
+                    <h4>❌ Executável não funciona em outros computadores</h4>
+                    <p><strong>Solução:</strong> Teste em um computador "limpo" sem Python instalado</p>
+                </div>
+
+                <h3>Problemas de Uso</h3>
+                
+                <div class="success">
+                    <h4>✅ Verificar Logs</h4>
+                    <p>Os logs são salvos em arquivos com data no nome: <code>processador_20250811.log</code></p>
+                </div>
+
+                <div class="success">
+                    <h4>✅ Verificar Pastas</h4>
+                    <p>Certifique-se de que as pastas Entrada/, Saida/, etc. foram criadas corretamente</p>
+                </div>
+
+                <h3>Comandos de Debug</h3>
+                <div class="code-block">
+# Verificar se PyInstaller está instalado
+python -c "import PyInstaller; print('OK')"
+
+# Testar o script Python diretamente
+python processador_simples.py
+
+# Verificar dependências
+pip list | grep -E "(pandas|openpyxl|xlrd)"
+
+# Criar executável com mais informações de debug
+pyinstaller --onefile --console --debug=all processador_simples.py
+                </div>
+            </section>
+
+            <section class="section">
+                <h2>🎯 Vantagens do Sistema de Executável</h2>
+                
+                <div class="grid">
+                    <div class="advantage">
+                        <h4>✅ Distribuição Simples</h4>
+                        <p>Um único arquivo .exe pode ser distribuído facilmente</p>
+                    </div>
+                    <div class="advantage">
+                        <h4>✅ Sem Dependências</h4>
+                        <p>Usuários não precisam instalar Python ou bibliotecas</p>
+                    </div>
+                    <div class="advantage">
+                        <h4>✅ Compatibilidade</h4>
+                        <p>Funciona em qualquer Windows compatível</p>
+                    </div>
+                    <div class="advantage">
+                        <h4>✅ Interface Familiar</h4>
+                        <p>Interface de console familiar para usuários Windows</p>
+                    </div>
+                    <div class="advantage">
+                        <h4>✅ Organização Automática</h4>
+                        <p>Arquivos são organizados automaticamente em pastas</p>
+                    </div>
+                    <div class="advantage">
+                        <h4>✅ Logs Detalhados</h4>
+                        <p>Registro completo de todas as operações</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <footer class="footer">
+            <p>�� Sistema de Processamento de Relatórios de Biblioteca</p>
+            <p>Documentação Completa - Desenvolvido para automação de processos de biblioteca</p>
+            <p>🔨 Criado com PyInstaller - Transformando Python em Executáveis</p>
+        </footer>
+    </div>
+</body>
+</html>
